@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCC Fun</title>
+    <style>
+        body {
+            background-color: #ffff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .pcc {
+            font-size: 100px;
+            color: #ff00ff;
+            text-shadow: 5px 5px 0 #00ffff;
+            animation: dance 0.5s infinite alternate;
+        }
+        @keyframes dance {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="pcc">PCC</div>
+    <script>
+        document.querySelector('.pcc').addEventListener('click', function() {
+            this.style.fontSize = Math.random() * 200 + 50 + 'px';
+            this.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
+        });
+    </script>
+</body>
+</html>
